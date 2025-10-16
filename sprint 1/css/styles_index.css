@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    font-size: 20px;
+    font-family: "Copperplate Gothic Bold", serif;
+}
+.header{
+    display: flex;
+    background-color: rgb(100, 233, 83);
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.header a{
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+}
+.header a:hover{
+    background-color: rgb(34, 177, 76);
+}
+.logo img{
+    height: 50px;
+    margin-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    
+}
+.logo a:hover{
+  background-color: transparent !important;
+}
