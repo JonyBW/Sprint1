@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betisware</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../images/betisware bien.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="../images/betisware bien.png" alt="logo inicio"></a> <!-- Logo con enlace a la página de inicio -->
+        </div>
+        <nav class="nav-links"> <!-- Navegación con enlaces a otras páginas -->
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="iniciarsesion.html">Iniciar Sesión</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Bienvenido a Betisware</h1>
+        <p>Tu solución tecnológica de confianza.</p>
+    </div>
+
+    <div class="carousel"> <!-- Carrusel de imágenes -->
+        <div class="slides">
+            <a href="talleres.html"><img src="../images/taller1.jpg" alt="Taller 1"></a>
+            <a href="talleres.html"><img src="../images/taller2.jpeg" alt="Taller 2"></a>
+            <a href="talleres.html"><img src="../images/taller3.jpeg" alt="Taller 3"></a>
+        </div>
+        <div class="dots"> <!-- Indicadores del carrusel -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script> // JavaScript para el carrusel
+        let slideIndex = 0; // índice inicial
+        const slides = document.querySelectorAll('.slides a'); // todas las diapositivas
+        const dots = document.querySelectorAll('.dot'); // todos los indicadores
+
+        function showSlide(index) { // muestra la diapositiva correspondiente
+            slides.forEach((s, i) => { // recorre todas las diapositivas
+            s.style.display = i === index ? 'block' : 'none'; // muestra solo la diapositiva actual
+            dots[i].classList.toggle('active', i === index); // activa el indicador correspondiente
+            });
+        }
+
+        function nextSlide() { // avanza a la siguiente diapositiva
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex); // inicializa el carrusel
+        setInterval(nextSlide, 4000); // cambia cada 4 segundos
+
+        dots.forEach((dot, i) => { // clic en dots
+            dot.addEventListener('click', () => {
+            slideIndex = i;
+            showSlide(slideIndex);
+            });
+        });
+    </script>
+
+</body>
+</html>
