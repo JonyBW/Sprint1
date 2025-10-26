@@ -19,5 +19,68 @@
             <a href="iniciarsesion.html">Iniciar Sesión</a>
         </nav>
     </div>
+
+    <div class="contacto-container">
+    <h1>Contáctanos</h1>
+    <p>Rellena esta breve encuesta y te responderemos lo antes posible.</p>
+
+    <form action="mailto:Betisware@Innolab.com" method="post" enctype="text/plain" class="contacto-form">
+      
+      <div class="nombre-apellido">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+      </div>
+
+      <label for="empresa">Empresa (opcional):</label>
+      <input type="text" id="empresa" name="empresa">
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="servicio">¿Qué tipo de servicio te interesa?</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona una opción</option>
+        <option value="redes">Instalación de redes</option>
+        <option value="servidores">Configuración de servidores</option>
+        <option value="digitalizacion">Digitalización de procesos</option>
+        <option value="mantenimiento">Mantenimiento técnico</option>
+      </select>
+
+      <label>¿Qué tan urgente es tu solicitud?</label>
+      <div class="opciones-radio">
+        <label><input type="radio" name="urgencia" value="alta" required> Alta</label>
+        <label><input type="radio" name="urgencia" value="media"> Media</label>
+        <label><input type="radio" name="urgencia" value="baja"> Baja</label>
+      </div>
+
+      <label for="mensaje">Describe brevemente tu necesidad:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+    <div class="footer-container"> <!-- Pie de página con enlaces legales y de contacto -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Betisware. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 </body>
 </html>

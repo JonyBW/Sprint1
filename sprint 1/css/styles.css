@@ -4,13 +4,13 @@
 body{
     margin: 0;
     font-size: 20px;
-    font-family: "Copperplate Gothic Bold", serif; /*cambia la tipografia*/
+    font-family: "aptos", sans-serif; /*cambia la tipografia*/
     background-color: rgb(240, 240, 240);
 }
 h1, h2, h3, h4, h5, h6{
     color: rgb(34, 177, 76);
     text-align: center;
-    font-family: "Copperplate Gothic Bold", serif;
+    font-family: "aptos", sans-serif;
 }
 h1{
     margin-top: 50px;
@@ -48,16 +48,66 @@ p{
   background-color: transparent !important; /*evita que el fondo del logo cambie al pasar el mouse*/
 }
 
+/* ESTILOS FOOTER */
+.footer-container { 
+  width: 100%;
+  background-color: #111;
+  border-top: 3px solid rgb(100, 233, 83);
+  margin-top: 50px;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 16px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* Texto */
+.footer p {
+  margin: 5px 0 15px 0;
+}
+
+/* Enlaces */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-links a { /* estilos de los enlaces */
+  color: rgb(100, 233, 83);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.footer-links a:hover { /* efecto hover para los enlaces */
+  color: rgb(34, 177, 76);
+  text-shadow: 0 0 6px rgba(100, 233, 83, 0.6);
+}
+
 /* ESTILOS GENERALES FIN */
 
 /* ESTILOS INDEX */
 
-.carousel { /* carrusel de imagenes */
+.carousel {
   position: relative;
-  width: 600px;
-  margin: 0 auto;
-  overflow: hidden; /* oculta las partes de las imagenes que sobresalen */
-  border-radius: 12px;
+  width: 100%;
+  max-width: 1000px;   /* ancho máximo del marco */
+  height: 400px;       /* altura fija del marco */
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 3px solid rgb(100, 233, 83); /* marco verde */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background-color: #111; /* fondo por si hay espacio vacío */
 }
 
 .slides a { /* contenedor de las imagenes */
@@ -67,46 +117,101 @@ p{
 .slides a img { /* imagenes del carrusel */
   width: 100%;
   display: block;
+  object-fit: cover;  /* ajusta la imagen sin deformar */
   border-radius: 12px;
   cursor: pointer;
 }
 
 .dots { /* seleccion de imagenes */
-  text-align: center;
-  margin-top: 8px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
 }
 
-.dot { /* estilo de los puntos */
+.dot {
   height: 12px;
   width: 12px;
-  margin: 0 4px;
+  margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .active { /* punto activo */
   background-color: rgb(100, 233, 83);
 }
 
+.info-section {
+  text-align: center;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.info-card {
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.cta-section {
+  text-align: center;
+  margin: 80px auto;
+  padding: 40px 20px;
+  background: rgb(240, 255, 240);
+  border-top: 2px solid rgb(100, 233, 83);
+  border-bottom: 2px solid rgb(100, 233, 83);
+}
+
+.btn-contacto {
+  display: inline-block;
+  background: rgb(100, 233, 83);
+  color: #000;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.btn-contacto:hover {
+  background: rgb(80, 200, 65);
+}
+
 /* ESTILOS INDEX FIN */
 
 /* ESTILOS FORMULARIO LOGIN */
 
-.login-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* centra el contenedor */
-  width: 380px;
-  aspect-ratio: 1/1;
-  padding: 25px;
+.login-container { /* contenedor del formulario */
+  width: 420px;
+  margin: 100px auto;
   background: #fff;
   border: 2px solid rgb(100, 233, 83);
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   text-align: center;
+  padding: 25px;
+  font-family: "Copperplate Gothic Bold", serif;
 }
 
 .login-container h2 {
@@ -142,6 +247,13 @@ p{
 .login-container button:hover { /* efecto hover para el boton */
   background: rgb(34,177,76);
 }
+/* Botón Crear cuenta */
+.register-btn {
+  background-color: transparent;
+  color: rgb(100, 233, 83);
+  border: 2px solid rgb(100, 233, 83);
+  font-weight: bold;
+}
 
 /* estilos bites the dust */
 
@@ -172,3 +284,335 @@ p{
 
 /* ESTILOS FORMULARIO LOGIN FIN */
 
+/* ESTILOS REGISTRO */
+
+.register-container {
+  width: 420px;
+  margin: 100px auto;
+  background: #fff;
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 25px;
+  font-family: "Copperplate Gothic Bold", serif;
+}
+
+.register-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.register-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.register-table label {
+  font-size: 16px;
+}
+
+.register-table input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(100, 233, 83);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: rgb(34, 177, 76);
+  transform: scale(1.02);
+}
+
+/* Botón volver */
+.volver-btn {
+  background-color: transparent;
+  color: rgb(100, 233, 83);
+  border: 2px solid rgb(100, 233, 83);
+  font-weight: bold;
+}
+
+.volver-btn:hover {
+  background-color: rgb(34, 177, 76);
+  color: white;
+}
+/* ESTILOS REGISTRO FIN */
+
+/* ESTILOS PREGUNTAS FRECUENTES */
+.faq-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    background-color: #fff;
+    border: 2px solid rgb(100, 233, 83);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* ESTILOS PREGUNTAS FRECUENTES FIN */
+
+/* ESTILOS AVISO LEGAL */
+.legal-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    background-color: #fff;
+    border: 2px solid rgb(100, 233, 83);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* ESTILOS AVISO LEGAL FIN */
+
+/* ESTILOS PRIVACIDAD */
+.priv-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    background-color: #fff;
+    border: 2px solid rgb(100, 233, 83);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.last{
+    color : rgb(83, 73, 73);
+}
+/* ESTILOS PRIVACIDAD FIN */
+
+/* EESTILOS COOKIES */
+.cookies-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    background-color: #fff;
+    border: 2px solid rgb(100, 233, 83);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* ESTILOS COOKIES FIN */
+
+/* ESTILOS TERMINOS Y CONDICIONES */
+.term-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    background-color: #fff;
+    border: 2px solid rgb(100, 233, 83);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* ESTILOS TERMINOS Y CONDICIONES FIN */
+
+/* ESTILOS SOBRE NOSOTROS */
+.sobre-nosotros {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* SECCIÓN DE INTRODUCCIÓN */
+.intro {
+  margin-bottom: 60px;
+}
+
+/* QUIÉNES SOMOS */
+.quienes-somos {
+  margin-bottom: 60px;
+}
+
+/* MISIÓN Y VISIÓN */
+.mision-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.mision-vision .bloque {
+  flex: 1 1 45%;
+  background: #fff;
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 25px;
+}
+
+/* VALORES */
+.valores {
+  margin-bottom: 60px;
+}
+
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.valor {
+  background: white;
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* CONTACTO FINAL */
+.contacto-nosotros {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.contacto-nosotros .btn-contacto {
+  display: inline-block;
+  background: rgb(34, 177, 76);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contacto-nosotros .btn-contacto:hover {
+  background: rgb(100, 233, 83);
+  box-shadow: 0 0 10px rgba(100,233,83,0.6);
+}
+/* ESTILOS SOBRE NOSOTROS FIN */
+
+/* ESTILOS CONTACTO */
+.contacto-container {
+  max-width: 700px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 40px;
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.contacto-container h1 {
+  margin-bottom: 15px;
+}
+
+/* Agrupación nombre y apellido */
+.nombre-apellido {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.contacto-form label {
+  font-weight: bold;
+  color: rgb(34, 177, 76);
+  text-align: left;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: "aptos", sans-serif;
+}
+
+.opciones-radio{
+  accent-color: rgb(100, 233, 83); /* color verde personalizado */
+  transform: scale(1.2); /* agranda un poco los radios */
+}
+
+.opciones-radio {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.contacto-form button {
+  margin-top: 10px;
+  background-color: rgb(34, 177, 76);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contacto-form button:hover {
+  background-color: rgb(100, 233, 83);
+  box-shadow: 0 0 10px rgba(100, 233, 83, 0.6);
+}
+
+/* ESTILOS CONTACTO FIN */
+
+/* ESTILOS SERVICIOS */
+.servicios-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.servicios-container p {
+  margin-bottom: 50px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.servicio {
+  background: white;
+  border: 2px solid rgb(100, 233, 83);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 25px;
+  max-width: 320px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(100,233,83,0.3);
+}
+
+.servicio img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* ESTILOS SERVICIOS FIN */
