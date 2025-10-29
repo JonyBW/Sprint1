@@ -63,11 +63,6 @@ p{
   font-size: 16px;
 }
 
-.footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 
 /* Texto */
 .footer p {
@@ -97,53 +92,30 @@ p{
 
 /* ESTILOS INDEX */
 
-.carousel {
-  position: relative;
+.img-index {
   width: 100%;
-  max-width: 1000px;   /* ancho máximo del marco */
-  height: 400px;       /* altura fija del marco */
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 15px;
-  border: 3px solid rgb(100, 233, 83); /* marco verde */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  background-color: #111; /* fondo por si hay espacio vacío */
-}
-
-.slides a { /* contenedor de las imagenes */
-  display: none;
-}
-
-.slides a img { /* imagenes del carrusel */
-  width: 100%;
-  display: block;
-  object-fit: cover;  /* ajusta la imagen sin deformar */
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.dots { /* seleccion de imagenes */
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+  margin: 60px auto;
+  text-align: center;
 }
 
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.img-index img {
+  display: block;
+  margin: 0 auto; /* fuerza el centrado absoluto */
+  max-width: 70%; /* ajusta el tamaño */
+  height: auto;
+  border: 5px solid rgb(100, 233, 83);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.active { /* punto activo */
-  background-color: rgb(100, 233, 83);
+.img-index img:hover {
+  transform: scale(1.03);
+  border-color: rgb(34, 177, 76);
+  box-shadow: 0 0 35px rgba(100, 233, 83, 0.6);
 }
 
 .info-section {
@@ -154,7 +126,7 @@ p{
 }
 
 .info-grid {
-  display: grid;
+  display: grid; /* pone los cardas en horizontal */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   margin-top: 40px;
@@ -253,33 +225,6 @@ p{
   color: rgb(100, 233, 83);
   border: 2px solid rgb(100, 233, 83);
   font-weight: bold;
-}
-
-/* estilos bites the dust */
-
-.hover-image {
-  position: fixed;
-  top: 50%;
-  left: calc(50% - 500px); /* coloca la imagen a la izquierda del login */
-  transform: translate(-50%, -50%); /* centra verticalmente */
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer; /* cambia el cursor al pasar por encima */
-}
-
-.hover-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease; /* transición suave */
-}
-
-/* solo se ve cuando pasas el ratón */
-.hover-image:hover img {
-  opacity: 1;
 }
 
 /* ESTILOS FORMULARIO LOGIN FIN */
@@ -616,3 +561,12 @@ button:hover {
 }
 
 /* ESTILOS SERVICIOS FIN */
+
+/* ESTILOS PROYECTOS */
+.proyectos-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+}
+/* ESTILOS PROYECTOS FIN */
