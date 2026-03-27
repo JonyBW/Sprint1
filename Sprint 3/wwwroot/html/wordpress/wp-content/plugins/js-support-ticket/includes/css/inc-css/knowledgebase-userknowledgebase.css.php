@@ -1,0 +1,270 @@
+<?php
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly 
+// if header is calling later
+JSSTincluder::getJSModel('jssupportticket')->checkIfMainCssFileIsEnqued();
+JSSTincluder::getJSModel('jssupportticket')->jsst_get_theme_colors();
+
+$jsst_color1 = jssupportticket::$jsst_colors['color1'];
+$jsst_color2 = jssupportticket::$jsst_colors['color2'];
+$jsst_color3 = jssupportticket::$jsst_colors['color3'];
+$jsst_color4 = jssupportticket::$jsst_colors['color4'];
+$jsst_color5 = jssupportticket::$jsst_colors['color5'];
+$jsst_color6 = jssupportticket::$jsst_colors['color6'];
+$jsst_color7 = jssupportticket::$jsst_colors['color7'];
+$jsst_color8 = jssupportticket::$jsst_colors['color8'];
+$jsst_color9 = jssupportticket::$jsst_colors['color9'];
+
+$jsst_jssupportticket_css = '';
+
+/*Code for Css*/
+$jsst_jssupportticket_css .= '
+    /* General Wrappers - Modern Layout */
+    div.js-ticket-knowledgebase-wrapper,
+    div.js-ticket-top-search-wrp,
+    div.js-ticket-download-content-wrp,
+    div.js-ticket-table-wrp {
+        width: 100%;
+        float: none; /* Remove float */
+        box-sizing: border-box;
+    }
+    div.js-ticket-top-search-wrp{display:flex;}
+
+    div.js-ticket-categories-wrp, div.js-ticket-downloads-wrp {
+        width: 100%;
+    }
+    .js-ticket-downloads-wrp {
+        width: 100%;
+    }
+
+    div.js-ticket-top-search-wrp,div.js-ticket-download-content-wrp {
+        border: 1px solid '. $jsst_color5 .';
+        width: 100%;
+    }
+    div.jsst-main-up-wrapper input, div.jsst-main-up-wrapper button, div.jsst-main-up-wrapper select, div.jsst-main-up-wrapper textarea
+    {
+        line-height: 1.3;
+        margin-bottom: 0px;
+    }
+
+    /* Card Styling for Search and Content Areas */
+    div.js-ticket-top-search-wrp,
+    div.js-ticket-download-content-wrp {
+        padding: 1.5rem;
+        border: 1px solid '. $jsst_color5 .';
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+        margin-bottom: 2rem;
+        margin-top: 17px;
+        background: #fff; /* Added for card effect */
+    }
+
+    /* Main Form Container - Flexbox Layout */
+    form#jssupportticketform {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    div.js-ticket-search-fields-wrp {
+        width: 100%;
+    }
+
+    div.js-ticket-fields-wrp {
+        display: contents; /* Allow parent form to control flex layout */
+    }
+
+    /* Individual Form Fields */
+    div.js-ticket-fields-wrp div.js-ticket-form-field{
+        float: none; /* Remove float */
+        position: relative;
+        flex: 1 1 200px; /* Responsive fields */
+        margin: 0;
+        width: auto;
+    }
+
+    /* Input and Select Styling */
+    div.js-ticket-fields-wrp div.js-ticket-form-field input.js-ticket-field-input {
+        width: 100%;
+        padding: 12px 18px;
+        border: 1px solid '. $jsst_color5 .';
+        border-radius: 8px;
+        height: auto; /* Remove fixed height */
+        line-height: 1.5;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    /* Button Wrapper */
+    div.js-ticket-search-form-btn-wrp,
+    div.js-ticket-search-form-btn-wrp-download {
+        float: none;
+        width: auto;
+        padding: 0;
+        margin-top: 0; /* Use flex-gap for alignment */
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    /* Buttons */
+    div.js-ticket-search-form-btn-wrp input,
+    div.js-ticket-search-form-btn-wrp-download input {
+        float: none;
+        width: auto;
+        padding: 5px 20px;
+        min-height:52px;
+        min-width:120px;
+        font-weight:600;
+        margin: 0;
+        border-radius: 8px;
+        height: auto;
+        line-height: 1.5;
+        border: 1px solid '. $jsst_color5 .';
+        cursor: pointer;
+        transition: opacity 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Heading Wrapper (for all sections) */
+    div.js-ticket-search-heading-wrp,
+    div.js-ticket-categories-heading-wrp,
+    div.js-ticket-downloads-heading-wrp {
+        width: 100%;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        float: none;
+        font-weight: 700;
+        border-radius: 8px;
+    }
+
+    /* Categories Section */
+    div.js-ticket-categories-wrp,
+    div.js-ticket-downloads-wrp {
+        margin-top: 2rem;
+    }
+
+    div.js-ticket-categories-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    div.js-ticket-category-box {
+        border-radius: 8px;
+        border: 1px solid '. $jsst_color5 .';
+        transition: all 0.2s ease;
+        text-align: center;
+    }
+
+    div.js-ticket-category-box:hover {
+        border-color: '. $jsst_color5 .';
+        transform: translateY(-2px);
+    }
+
+    a.js-ticket-category-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-decoration: none;
+    }
+
+    span.js-ticket-category-kb-logo {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img.js-ticket-kb-img {
+        max-height: 100%;
+    }
+
+    span.js-ticket-category-name {
+        font-weight: 600;
+        display: block;
+    }
+
+    /* Articles Section (using downloads classes) */
+    div.js-ticket-downloads-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    div.js-ticket-download-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid '. $jsst_color5 .';
+        transition: background-color 0.2s ease;
+    }
+
+    a.js-ticket-download-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        font-weight: 600;
+    }
+';
+/*Code For Colors*/
+$jsst_jssupportticket_css .= '
+    div.js-ticket-top-search-wrp{border:1px solid  ' . $jsst_color5 . ';}
+    div.js-ticket-search-fields-wrp {background:#fff;}
+    div.js-ticket-fields-wrp div.js-ticket-form-field input.js-ticket-field-input{background-color: #fff;border:1px solid  ' . $jsst_color5 . ';color: ' . $jsst_color4 . ';}
+    span.js-ticket-download-name {color: ' . $jsst_color2 . '}
+    span.js-ticket-download-name:hover {color: ' . $jsst_color1 . '}
+    div.js-ticket-search-form-btn-wrp input.js-search-button,
+    div.js-ticket-search-form-btn-wrp-download input.js-search-button {
+        background: ' . $jsst_color1 . ' !important;
+        color: ' . $jsst_color7 . ' !important;
+    }
+    div.js-ticket-search-form-btn-wrp input.js-search-button:hover,
+    div.js-ticket-search-form-btn-wrp-download input.js-search-button:hover {
+        background: ' . $jsst_color2 . ' !important;
+        color: ' . $jsst_color7 . ' !important;
+    }
+    div.js-ticket-search-form-btn-wrp input.js-reset-button,
+    div.js-ticket-search-form-btn-wrp-download input.js-reset-button {
+        background-color: #f5f2f5; color: #636363; border: 1px solid '. $jsst_color5 .'; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    div.js-ticket-search-form-btn-wrp input.js-reset-button:hover,
+    div.js-ticket-search-form-btn-wrp-download input.js-reset-button:hover {
+        background: ' . $jsst_color2 . ' !important;
+        color: ' . $jsst_color7 . ' !important;
+    }
+
+    /* Headings */
+    div.js-ticket-search-heading-wrp,
+    div.js-ticket-categories-heading-wrp,
+    div.js-ticket-downloads-heading-wrp {
+        background-color: ' . $jsst_color2 . ';
+        color: ' . $jsst_color7 . ';
+    }
+
+    /* Categories */
+    div.js-ticket-category-box { border-color: ' . $jsst_color5 . '; background-color: #fff; }
+    div.js-ticket-category-box:hover { border-color: ' . $jsst_color1 . '; }
+    a.js-ticket-category-title span.js-ticket-category-name { color: ' . $jsst_color4 . '; }
+    a.js-ticket-category-title:hover span.js-ticket-category-name { color: ' . $jsst_color1 . '; }
+
+    /* Articles List */
+    div.js-ticket-download-box { border-color: ' . $jsst_color5 . '; background-color:#fff; }
+    a.js-ticket-download-title { color: ' . $jsst_color1 . '; }
+    a.js-ticket-download-title:hover { color: ' . $jsst_color2 . '; }
+';
+
+
+wp_add_inline_style('jssupportticket-main-css', $jsst_jssupportticket_css);
+
+
+?>

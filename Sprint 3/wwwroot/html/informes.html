@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <title>Informes</title>
+    <link rel="shortcut icon" href="../images/betisware_bien.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    </head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="../images/betisware_bien.png" alt="logo inicio"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="informes.html">Informes</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="iniciarsesion.html">Iniciar Sesión</a>
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <h1>Listado de Proyectos</h1>
+
+        <div class="row">
+            <div class="ideas">
+                <div class="cuadroTextoIdeas">
+                    <input id="codProyectoTexto" type="text" placeholder="Introduce el código de proyecto aquí">
+                </div>
+                <div class="ideas-btn">
+                    <button onclick="cargarInformes(document.getElementById('codProyectoTexto').value)">Cargar proyectos</button>
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="data-card">
+
+                    <table id="tabladatos" class="table table-striped table-bordered" style="width:100%">
+                       <thead>
+                            <tr>
+                                <th style="background-color: rgb(100, 233, 83); color: white;" colspan="4">Proyectos</th>
+                            </tr>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Presupuesto restante</th>
+                                <th>Top inversor</th>
+                                <th>Cantidad de empleados</th>
+                            </tr>
+                       </thead>
+                       <tbody id="ContenidoTablaInformes">
+                       </tbody>
+                    </table>
+
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="container-fluid sql-consultas">
+        <h2> Resultados de Consultas SQL</h2>
+
+        <div class="consulta-grupo">
+            <h3>Todas las Consultas</h3>
+
+            <p><strong>C1: Proyectos por Total Invertido</strong></p>
+            <button class="toggle-btn" data-target="c1-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c1-img">
+                <img src="../images/C1.png" alt="Proyectos por Total Invertido">
+            </div>
+
+            <p><strong>C2: Horas Totales Registradas por Perfil</strong></p>
+            <button class="toggle-btn" data-target="c2-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c2-img">
+                <img src="../images/C2.png" alt="Horas Totales por Perfil">
+            </div>
+
+            <p><strong>C3: Ideas en Preparación por Puntuación Total</strong></p>
+            <button class="toggle-btn" data-target="c3-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c3-img">
+                <img src="../images/C3.png" alt="Ideas en Preparación">
+            </div>
+
+            <p><strong>C4: Proyectos: Fechas de Inicio, Límite y Duración Total en Días</strong></p>
+            <button class="toggle-btn" data-target="c4-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c4-img">
+                <img src="../images/C4.png" alt="Fechas y Duración de Proyectos">
+            </div>
+
+            <p><strong>C5: Proyectos con Presupuesto Restante</strong></p>
+            <button class="toggle-btn" data-target="c5-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c5-img">
+                <img src="../images/C5.png" alt="Proyectos con Presupuesto Restante">
+            </div>
+
+            <p><strong>C6: Empleados con Salario Anual</strong></p>
+            <button class="toggle-btn" data-target="c6-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c6-img">
+                <img src="../images/C6.png" alt="Empleados y Salario Anual">
+            </div>
+
+            <p><strong>C7: Proyectos por Total de Empleados Asignados</strong></p>
+            <button class="toggle-btn" data-target="c7-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c7-img">
+                <img src="../images/C7.png" alt="Proyectos y Empleados Asignados">
+            </div>
+
+            <p><strong>C8: Datos de Dirección No Asignada a un Nombre</strong></p>
+            <button class="toggle-btn" data-target="c8-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c8-img">
+                <img src="../images/C8.png" alt="Dirección Sin Asignar">
+            </div>
+
+            <p><strong>C9: Proyectos: Empleados y Horas Invertidas</strong></p>
+            <button class="toggle-btn" data-target="c9-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c9-img">
+                <img src="../images/C9.png" alt="Proyectos: Empleados y Horas Invertidas">
+            </div>
+
+            <p><strong>C10: Perfiles y Total de Proyectos Asignados</strong></p>
+            <button class="toggle-btn" data-target="c10-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c10-img">
+                <img src="../images/C10.png" alt="Perfiles y Proyectos Asignados">
+            </div>
+
+            <p><strong>C11: Inversión Total y Número de Inversiones por Trimestre</strong></p>
+            <button class="toggle-btn" data-target="c11-img">Mostrar Resultado</button>
+            <div class="consulta-imagen" id="c11-img">
+                <img src="../images/C11.png" alt="Inversión Trimestral 2025">
+            </div>
+        </div>
+    </div>
+    <script src="../js/elescriptxd.js"></script>
+    <script></script>
+
+    <div class="footer-container">
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Betisware. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
