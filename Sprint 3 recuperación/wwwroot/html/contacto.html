@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../images/betisware_bien.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/elescriptxd.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "contacto",
+      "url": "https://betisware.com/contacto.html",
+      "description": "Información de contacto sobre betisware",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Betisware",
+        "url": "https://betisware.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="../images/betisware_bien.png" alt="logo inicio"></a> <!-- Logo con enlace a la página de inicio -->
+        </div>
+        <nav class="nav-links"> <!-- Navegación con enlaces a otras páginas -->
+            <a href="informes.html">Informes</a>  
+            <a href="proyectos.html">Proyectos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="iniciarsesion.html">Iniciar Sesión</a>
+        </nav>
+    </div>
+
+    <div class="contacto-container">
+    <h1>Contáctanos</h1>
+    <p>Rellena esta breve encuesta y te responderemos lo antes posible.</p>
+
+    <form action="mailto:Betisware@Innolab.com" method="post" enctype="text/plain" class="contacto-form">
+      
+      <div class="nombre-apellido">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+      </div>
+
+      <label for="empresa">Empresa (opcional):</label>
+      <input type="text" id="empresa" name="empresa">
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="servicio">¿Qué tipo de servicio te interesa?</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona una opción</option>
+        <option value="redes">Instalación de redes</option>
+        <option value="servidores">Configuración de servidores</option>
+        <option value="digitalizacion">Digitalización de procesos</option>
+        <option value="mantenimiento">Mantenimiento técnico</option>
+      </select>
+
+      <label>¿Qué tan urgente es tu solicitud?</label>
+      <div class="opciones-radio">
+        <label><input type="radio" name="urgencia" value="alta" required> Alta</label>
+        <label><input type="radio" name="urgencia" value="media"> Media</label>
+        <label><input type="radio" name="urgencia" value="baja"> Baja</label>
+      </div>
+
+      <label for="mensaje">Describe brevemente tu necesidad:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+    <div class="footer-container"> <!-- Pie de página con enlaces legales y de contacto -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Betisware. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

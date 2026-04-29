@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../images/betisware_bien.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/elescriptxd.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "iniciarsesion",
+      "url": "https://betisware.com/iniciarsesion.html",
+      "description": "Inicio de sesión de betisware.com",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Betisware",
+        "url": "https://betisware.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="header"> <div class="logo">
+            <a href="index.html"><img src="../images/betisware_bien.png" alt="logo inicio"></a> </div>
+            <nav class="nav-links"> 
+            <a href="informes.html">Informes</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="iniciarsesion.html">Iniciar Sesión</a>
+        </nav>
+    </div>
+
+
+    <div class="login-container"> <h2>Iniciar Sesión</h2>
+        <form action="#" onsubmit=""> 
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required="required">
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required="required">
+
+            <button type="button" onclick="login(document.getElementById('username').value, document.getElementById('password').value)">Entrar</button>
+            <button type="button" class="register-btn" onclick="window.location.href='registro.html'">
+                Crear cuenta
+            </button>
+            <button type="button" onclick="window.location.href='/wordpress/wp-login.php'">Entrar a wordpress</button>
+        </form>
+        <p id="login-message" style="color: red; margin-top: 15px; font-weight: bold;"></p>
+    </div>
+    
+
+
+    <div class="footer-container"> <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Betisware. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="preguntas.html">Preguntas Frecuentes</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
