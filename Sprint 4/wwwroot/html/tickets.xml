@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tickets.xsl"?>
+<TicketsSet system="JS_Ticket_Manager" export_date="2026-04-29">
+
+    <Ticket id="1">
+        <Priority>4</Priority>
+        <Status>3</Status>
+        <Requester email="mario.rodriguez@maristak.net">Mario Rodriguez</Requester>
+        <Phone>1234567890</Phone>
+        <Subject>Fallo en el servidor de administracion</Subject>
+        <Description>El servidor no entrega correctamente IPs. Posible incidencia en el servicio DHCP.</Description>
+        <Timestamps>
+            <Created>2026-04-29 06:33:13</Created>
+            <Updated>2026-04-29 06:37:51</Updated>
+        </Timestamps>
+    </Ticket>
+
+    <Ticket id="2">
+        <Priority>1</Priority>
+        <Status>5</Status>
+        <Requester email="ricardo.jimenez@maristak.net">Ricardo Jimenez</Requester>
+        <Phone>1234567890</Phone>
+        <Subject>Error en inicio de sesión de dominio</Subject>
+        <Description>El usuario aruiz no puede iniciar sesion.</Description>
+        <Timestamps>
+            <Created>2026-04-29 06:35:31</Created>
+            <Updated>2026-04-29 06:38:18</Updated>
+        </Timestamps>
+    </Ticket>
+
+    <Ticket id="3">
+        <Priority>2</Priority>
+        <Status>1</Status>
+        <Requester email="edorta.zuloaga@maristak.net">Edorta Zuloaga</Requester>
+        <Phone>1234567890</Phone>
+        <Subject>Fallo en la red</Subject>
+        <Description>Sostenibilidad ha tenido un percance con los ordenadores, no tenemos acceso a la red local.</Description>
+        <Timestamps>
+            <Created>2026-04-29 07:03:48</Created>
+            <Updated>2026-04-29 07:03:48</Updated>
+        </Timestamps>
+    </Ticket>
+
+</TicketsSet>

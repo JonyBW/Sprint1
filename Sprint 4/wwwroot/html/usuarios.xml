@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="usuarios.xsl"?>
+<usuarios>
+  <usuario>
+    <display_name>Edorta Zuloaga</display_name>
+    <user_email>edorta.zuloaga@maristak.net</user_email>
+    <id>1</id>
+  </usuario>
+  <usuario>
+    <display_name>Ricardo Jimenez</display_name>
+    <user_email>ricardo.jimenez@maristak.com</user_email>
+    <id>2</id>
+  </usuario>
+  <usuario>
+    <display_name>Mario Rodriguez</display_name>
+    <user_email>mario.rodriguez@maristak.net</user_email>
+    <id>3</id>
+  </usuario>
+  <usuario>
+    <display_name>Jon Villafruela</display_name>
+    <user_email>jon.villafruela@maristak.com</user_email>
+    <id>4</id>
+  </usuario>
+</usuarios>

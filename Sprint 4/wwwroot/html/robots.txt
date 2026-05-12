@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /phpInfo.php
+Disallow: /wordpress/
+Allow: /wordpress/wp-login.php
+Allow: /wordpress/wp-content/index.php
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+Sitemap: https://tudominio.com/sitemap.xml
